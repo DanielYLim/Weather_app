@@ -41,7 +41,7 @@ def parse_soup(sp):
 
 
 
-cities = "toronto", "ottawa", "halifax", "St John's"
+# cities = "toronto", "ottawa", "halifax", "St John's"
 # cities are from R input
 
 Weather_data_all = []
