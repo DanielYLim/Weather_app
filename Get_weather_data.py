@@ -5,11 +5,11 @@ import pandas as pd
 import datetime
 
 # enter city name
-#city = "Toronto"
+# city = "Toronto"
 
 
 # create url
-#url = "https://www.google.com/search?q="+"weather"+city
+# url = "https://www.google.com/search?q="+"weather"+city
 
 
 
@@ -36,12 +36,12 @@ def parse_soup(sp):
     time = "% s % s"%(date_data, data[0])
     sky = data[1]
     key_data = date_data + city
-    weather_data.append((key_data, time, city, temp, sky, date_data))
+    weather_data = [key_data, time, city, temp, sky, date_data]
     return weather_data
 
 
 
-# cities = "toronto", "ottawa", "halifax", "St John's"
+cities = "toronto", "ottawa", "halifax", "St John's"
 # cities are from R input
 
 Weather_data_all = []
@@ -49,7 +49,7 @@ for city in cities:
     url = "https://www.google.com/search?q="+"weather"+city
     sp = get_page(url)
     weather_data = parse_soup(sp)
-    Weather_data_all.append(weather_data[0])
+    Weather_data_all.append(weather_data)
 
 
 print(Weather_data_all)

@@ -17,11 +17,6 @@ sapply(need_lib,require,character=TRUE)
 use_python("/Users/yongholim/opt/anaconda3/bin/python") 
 
 
-
-hazardLL<-function(alpha1,beta1,t){
-  ((beta1/alpha1)*(t/alpha1)^(beta1-1))/(1+(t/alpha1)^beta1)
-}
-
 # cities = "Toronto, Vancouver, Halifax"
 # nchar(cities)
 # unlist(strsplit(cities, ","))
